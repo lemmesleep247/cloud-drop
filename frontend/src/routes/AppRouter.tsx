@@ -8,7 +8,7 @@ import axios from 'axios';
 import Loading from '../components/Loading';
 
 const AppRouter = () => {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   // Use state for authentication status instead of deriving it from localStorage
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
